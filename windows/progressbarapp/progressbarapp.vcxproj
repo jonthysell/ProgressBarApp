@@ -23,7 +23,8 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Label="ReactNativeWindowsProps">
     <ReactNativeWindowsDir Condition="'$(ReactNativeWindowsDir)' == ''">$([MSBuild]::GetDirectoryNameOfFileAbove($(MSBuildThisFileDirectory), 'node_modules\react-native-windows\package.json'))\node_modules\react-native-windows\</ReactNativeWindowsDir>
-    <UseExperimentalNuget>true</UseExperimentalNuget>    <!-- This will eventually default to true and this property should be removed -->
+    <UseExperimentalNuget>true</UseExperimentalNuget>
+    <!-- This will eventually default to true and this property should be removed -->
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|ARM">
@@ -73,7 +74,8 @@
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
   <ImportGroup Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -110,6 +112,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClInclude>
+    <ClInclude Include="ProgressBarViewManager.h" />
     <ClInclude Include="ReactPackageProvider.h" />
     <ClInclude Include="AutolinkedNativeModules.g.h" />
     <ClInclude Include="pch.h" />
@@ -141,6 +144,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
       <SubType>Code</SubType>
     </ClCompile>
+    <ClCompile Include="ProgressBarViewManager.cpp" />
     <ClCompile Include="ReactPackageProvider.cpp" />
     <ClCompile Include="AutolinkedNativeModules.g.cpp" />
     <ClCompile Include="pch.cpp">

@@ -1,7 +1,7 @@
 'use strict';
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView, TextInput, TouchableOpacity } from 'react-native';
-import ProgressBar from 'react-native-progress/Bar';
+import ProgressBar from './progressbar';
 import RadioForm from 'react-native-simple-radio-button';
 
 class TitleBox extends React.Component {
