@@ -194,7 +194,7 @@ class ProgressBarDemo extends React.Component {
         <View style={this.styles.mainBox} >
           <View style={this.styles.sampleBox} >
             <View style={this.styles.progressBarBox} >
-              <ProgressBar style={this.styles.progressBar} progress={this.state.progressBarValue / 100} indeterminate={this.props.indeterminate} height={4} width={this.state.progressBarWidth} borderWidth={0} color='rgb(0, 120, 212)' unfilledColor='rgb(204, 204, 204)' />
+              <ProgressBar style={this.styles.progressBar} progress={this.state.progressBarValue / 100} indeterminate={this.props.indeterminate} height={4} width={this.state.progressBarWidth} borderWidth={0} color='rgb(0, 120, 212)' unfilledColor='rgb(204, 204, 204)' showPaused={this.state.progressBarPaused} showError={this.state.progressBarError} />
             </View>
             { this.props.indeterminate &&
             <View style={this.styles.radioBox}>
